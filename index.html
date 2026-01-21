@@ -136,10 +136,10 @@
             transition: opacity 0.3s;
         }
 
-        #menu:checked~.overlay {
+        /* #menu:checked~.overlay {
             opacity: 1;
             pointer-events: all;
-        }
+        } */
 
         /* Main */
         main {
@@ -224,6 +224,12 @@
             font-weight: 500;
         }
 
+        @media (max-width: 1285px) {
+            main {
+                margin-left: 0;
+            }
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
             .hamburger {
@@ -243,9 +249,9 @@
                 left: 0;
             }
 
-            #menu:checked~main {
+            /* #menu:checked~main {
                 margin-left: 240px;
-            }
+            } */
 
             main {
                 margin-left: 0;
@@ -283,7 +289,7 @@
 
     <input type="checkbox" id="menu" hidden>
 
-    <aside class="sidebar">
+    <!-- <aside class="sidebar">
         <div class="user">
             <div class="avatar"></div>
             <strong>Bạn Và Tôi</strong>
@@ -294,7 +300,7 @@
         <a href="#">📊 Tiến độ</a>
         <a href="#">🏆 Chứng chỉ</a>
         <a href="#">⚙️ Cài đặt</a>
-    </aside>
+    </aside> -->
 
     <div class="overlay" onclick="document.getElementById('menu').checked=false"></div>
 
